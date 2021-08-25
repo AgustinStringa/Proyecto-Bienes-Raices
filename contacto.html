@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Bienes Raices </title>
+
+
+    <!-- introduccion de una fuente de google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="contenedor contenido_header">
+
+
+            <div class="contenedor_barra">
+                <a href="index.html" alt="logo">
+                    <img src="img/logo.svg">
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+
+            </div>
+
+
+
+        </div>
+
+    </header>
+
+
+    <h1 class="fw_200 centrar-texto h1_anuncio"> Contacto </h1>
+
+    <img src="img/destacada3.jpg" alt="imagen de Contaco">
+
+    <main class="contenedor seccion contenido-centrado-800 ">
+
+        <h2 class="fw_200 centrar-texto"> Completa el formulario de Contacto</h2>
+
+        <form action="">
+
+            <fieldset>
+
+                <legend>Información Personal</legend>
+
+                <label for="nombre">Apellidos y Nombres:</label>
+                <input type="text" name="" id="nombre" placeholder="Ej: Agustín Stringa" required="required">
+
+                <!--for de label y id de input deben llevar el mismo valor para corresponderse-->
+
+                <label for="email">Email:</label>
+                <input type="email" name="" id="email" placeholder="Ej: agustinstringa24@hotmail.com" required="required">
+
+
+                <label for="telefono"> Teléfono:</label>
+                <input type="tel" name="" id="telefono" placeholder="Ej: 3467412278" required="required">
+
+                <label for="mensaje"> Mensaje: </label>
+                <textarea name="" id="mensaje" required="required">Buenos días estimado equipo de Bienes racíces:</textarea>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend> Información sobre Propiedad </legend>
+
+                <label for="opciones"> Venta o Compra</label>
+                <select id="opciones" required="required">
+					<option value="" disabled="disabled" selected="selected">-- Seleccione una opción --</option>
+					<option value="">Compra</option>
+					<option value="">Venta</option>
+
+				</select>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" name="" min="0" required="required">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Contacto</legend>
+
+                <p> -¿Cómo desea ser contactado?</p>
+                <label for="telefono_contacto">Teléfono</label>
+                <input type="radio" name="radio_contacto" value="telefono" id="telefono_contacto">
+
+                <label for="correo">Correo</label>
+                <input type="radio" name="radio_contacto" value="correo" id="correo">
+
+                <p> -Si eligió telefono, determine la fecha y la hora para la llamada</p>
+
+                <label for="fecha"> Fecha: </label>
+                <input type="date" id="fecha" name="" required="required">
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="" min="09:00" max="19:00" required="required">
+
+
+            </fieldset>
+
+            <input type="submit" name="" class="boton boton_verde">
+
+
+        </form>
+
+
+
+    </main>
+
+
+    <footer class="site_footer seccion">
+
+        <div class="contenedor_footer contenedor">
+
+            <nav class="navegacion">
+                <a href="nosotros.html"> Nosotros</a>
+                <a href="anuncios.html"> Anuncios</a>
+                <a href="blog.html"> Blog</a>
+                <a href="contacto.html"> Contacto</a>
+            </nav>
+
+            <p class="copyright"> Todos los derechos reservados &copy; 2021</p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

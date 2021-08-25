@@ -1,0 +1,650 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+/*Introduccion de fuente*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Globales */
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    /*ambos margin para centrar el contenido automaticamente*/
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+
+/** utilidades **/
+
+.contenido-centrado-800 {
+    max-width: 800px;
+}
+
+.seccion {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.d_block {
+    /*para convertir un elemento a display:block*/
+    display: block!important;
+}
+
+.fw_200 {
+    font-weight: 200;
+}
+
+
+/* 	BOTONES	 */
+
+.boton {
+    text-decoration: none;
+    color: #FFF;
+    text-decoration: none;
+    margin-top: 1em;
+    font-size: 2rem;
+    font-weight: 525;
+    padding: 0.5em 1.5em;
+    text-align: center;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width:768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.boton_naranja {
+    background-color: #E08709;
+}
+
+.boton_verde {
+    background-color: #71B100;
+}
+
+.boton_verde:hover {
+    background-color: #608301;
+}
+
+
+/* Header */
+
+
+/** ESTA CLASE SE APLICA SOLO AL SITE HEADER INDEPENDIENTEMENTE DE QUE PAGINA SEA**/
+
+.site-header {
+    background-color: #333;
+    padding: 1em 0 2em 0;
+}
+
+.site-header.inicio {
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 120vh;
+    /*este valor vh toma el tamaño total de la pantalla*/
+    min-height: 100%;
+    width: 100%;
+    /*agregada*/
+}
+
+
+/*esta clase se crea para contener a los dos elementos hijos del header. al h1 y al div con nombre contenedor barra*/
+
+.contenido_header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /*toma el 100 de su contenedor, en este caso, del header*/
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .contenido_header {
+        text-align: left;
+    }
+}
+
+.contenedor_barra a img {
+    margin-bottom: 4rem;
+}
+
+.contenido_header h1 {
+    color: #FFF;
+    padding-bottom: 2em;
+    max-width: 15em;
+    line-height: 2;
+    margin-bottom: 3rem;
+    ;
+}
+
+@media (min-width:768px) {
+    .contenedor_barra {
+        display: flex;
+        /*una forma de posicionar en CSS que solo afecta a las etiquetas hijas del contenedor al cual se aplica*/
+        justify-content: space-between;
+        /*de esta forma alineamos un elemento a la izq y otro a la derecha, cuando existan 2*/
+        text-align: center;
+        align-items: center;
+    }
+    .contenedor_barra a img {
+        margin-bottom: 0;
+    }
+}
+
+
+/** Navegacion **/
+
+.navegacion a {
+    /*de esta forma selecciono la clase, y dentro de esta las etiquetas hijas a*/
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+@media (min-width:768px) {
+    .navegacion a {
+        display: inline-block;
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+.navegacion a:hover {
+    color: #71B100;
+}
+
+
+/**MOBILE MENU**/
+
+.mobile_menu img {
+    width: 5rem;
+    ;
+}
+
+@media (min-width:768px) {
+    .mobile_menu {
+        display: none;
+    }
+}
+
+.navegacion:target {
+    display: block;
+}
+
+.navegacion {
+    display: none;
+}
+
+@media (min-width:768px) {
+    .navegacion {
+        display: block;
+    }
+}
+
+
+/*
+.navegacion a:last-of-type { 
+	margin-right: 0;
+}
+
+*/
+
+
+/* ICONOS NOSTROS */
+
+@media (min-width:768px) {
+    .iconos_nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.titulo_encabezado_nosotros {
+    font-weight: 50;
+    text-align: center;
+}
+
+.icono {
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 4rem;
+}
+
+.icono p {
+    font-size: 1.8rem;
+}
+
+@media (min-width:768px) {
+    .icono {
+        flex-basis: calc(35% - 3rem);
+    }
+}
+
+.icono h3 {
+    text-transform: uppercase;
+}
+
+
+/*ANUNCIOS*/
+
+@media (min-width:768px) {
+    .contenedor_anuncios {
+        display: flex;
+        justify-content: space-between;
+        /*propiedad en flex para encolumnar*/
+        flex-wrap: wrap;
+        /**/
+    }
+}
+
+.anuncio {
+    /*Este margin abajo se agrega para separar los grupos creados mediante wrap*/
+    margin-bottom: 2em;
+    /**/
+    border-color: #B5B5B5;
+    border-width: .1em;
+    border-style: solid;
+    background-color: #F5F5F5;
+}
+
+@media (min-width:768px) {
+    .anuncio {
+        /*propiedad para impedir encojimiento*/
+        flex-shrink: 0;
+        /**/
+        flex-grow: 0;
+        flex-basis: calc(33% - .5em);
+    }
+}
+
+.contenido_anuncio {
+    padding: 2em;
+}
+
+.contenido_anuncio h3 {
+    margin: 0;
+}
+
+.contenido_anuncio p {
+    font-size: 1.7rem;
+}
+
+.contenido_anuncio h3,
+.contenido_anuncio p {
+    /*margin: 0;*/
+    line-height: 2;
+}
+
+.precio {
+    color: #71B100;
+    font-weight: 800;
+}
+
+.iconos_caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    /*LINEA AGREGADA PARA LA PAGINA DEL ANUNCIO INDIVIDUAL*/
+    flex: 1;
+}
+
+.iconos_caracteristicas li {
+    /*flex: 1;*/
+    display: flex;
+}
+
+.iconos_caracteristicas li img {
+    margin-right: 1em;
+}
+
+.iconos_caracteristicas li p {
+    font-size: 1.8rem;
+}
+
+
+/**.iconos_caracteristicas li:last-of-type {
+	margin-right: 0;
+}*/
+
+.ver_todas {
+    display: flex;
+    justify-content: center;
+}
+
+
+/** Contacto en Pagina Principal  **/
+
+.imagen_contacto {
+    background-image: url(../img/encuentra.jpg);
+    height: 30em;
+    background-position: center center;
+    background-size: cover;
+    /** APLICACION DE FLEXBOX PARA ELEMENTOS DIRECTAMENTE HIJOS**/
+    display: flex;
+    align-items: center;
+    /*´para que se centre verticalmente*/
+}
+
+.contenido_contacto {
+    flex: 0 0 95%;
+    color: #FFF;
+}
+
+.contenido_contacto p {
+    font-size: 1.8rem;
+}
+
+
+/**  SECCION INFERIOR  **/
+
+@media (min-width:768px) {
+    .seccion_inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+    .seccion_inferior .blog {
+        flex-basis: 60%;
+    }
+    .seccion_inferior .testimoniales {
+        flex-basis: calc(40% - 3em);
+    }
+}
+
+.entrada_blog {
+    margin-bottom: 2em;
+}
+
+@media (min-width:768px) {
+    .entrada_blog {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.entrada_blog:last-of-type {
+    /*para eliminar el borde inferior a la ultima entrada del blog*/
+    /*En este caso se presentan 2, pero si hubiese más, seguiria el mismo principio*/
+    margin-bottom: 0;
+}
+
+@media (min-width:768px) {
+    .entrada_blog .imagen_entrada {
+        flex-basis: 40%;
+    }
+    .entrada_blog .texto_entrada {
+        flex-basis: calc(60% - 1em);
+    }
+    .texto_entrada h4 {
+        margin-top: 0!important;
+    }
+}
+
+.entrada_blog .texto_entrada p {
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+.texto_entrada h4 {
+    margin: 0;
+    margin-top: 2rem;
+    line-height: 1.2;
+}
+
+
+/** INTRODUCCION DE PSEUDO ELEMENTO **/
+
+.texto_entrada h4::after {
+    display: block;
+    width: 8em;
+    height: 0.2em;
+    content: '';
+    background-color: #71B100;
+    margin-top: 0.4em;
+}
+
+.texto_entrada p {
+    line-height: 2;
+}
+
+.texto_entrada a {
+    color: #000;
+    text-decoration: none;
+}
+
+.texto_entrada a:hover {
+    color: #71B100;
+}
+
+.texto_entrada span {
+    color: #E08709;
+    font-weight: 900;
+}
+
+
+/** TESTIMONIALES **/
+
+.testimonial {
+    background-color: #71B100;
+    font-size: 2rem;
+    color: #FFF;
+    font-weight: 200;
+    line-height: 2;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.testimonial p {
+    text-align: right;
+    font-weight: 650;
+}
+
+.testimonial blockquote::before {
+    content: '';
+    color: #FFF;
+    background-image: url(../img/comilla.svg);
+    width: 2.5em;
+    height: 2em;
+    position: absolute;
+    left: -1em;
+    top: -1em;
+}
+
+.testimonial blockquote {
+    position: relative;
+    padding-left: 2.5em;
+}
+
+
+/*** FOOOTER ***/
+
+.site_footer {
+    background-color: #333;
+    margin-bottom: 0;
+}
+
+.contenedor_footer {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .contenedor_footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site_footer .copyright {
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #FFF;
+}
+
+.copyright {
+    font-size: 1.8rem;
+}
+
+
+/**A PARTIR DE AQUI SE MANEJA CODIGO PARA PAGINAS INTERNAS **/
+
+
+/*MAIN DE LA PAGINA NOSOTROS*/
+
+@media (min-width:768px) {
+    .contenido_nosotros {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 2em;
+    }
+}
+
+.texto_nosotros blockquote {
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 1em 0 1em 0;
+}
+
+.texto_nosotros p {
+    font-size: 1.8rem;
+}
+
+
+/**   MAIN DELA PAGINA DEL ANUNCIO INDIVIDUAL **/
+
+.resumen_propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resumen_propiedad .precio {
+    font-size: 1.8rem;
+}
+
+.texto_pagina_anuncio {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.h1_anuncio {
+    margin-top: 2em;
+}
+
+
+/**		MAIN DE LA PAGINA DEL BLOG	***/
+
+.texto_pagina_anuncio span {
+    color: #E08709;
+    font-weight: 600;
+}
+
+.texto_pagina_blog {
+    line-height: 1.4;
+    font-size: 1em;
+}
+
+
+/***		FORMULARIO PAGINA CONTACTO 	***/
+
+form p {
+    font-size: 2rem;
+    color: #4F4F4F;
+}
+
+label {
+    display: block;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+input:not([type="submit"]),
+textarea {
+    display: block;
+    width: 100%;
+    background-color: #E1E1E1;
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+input[type="submit"] {
+    border: none;
+}
+
+textarea {
+    height: 15em;
+}
+
+fieldset {
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+legend {
+    font-size: 2rem;
+    color: #333;
+}
+
+input,
+textarea,
+select {
+    font-size: 1.8rem;
+}
+
+select {
+    margin-bottom: 1em;
+}
